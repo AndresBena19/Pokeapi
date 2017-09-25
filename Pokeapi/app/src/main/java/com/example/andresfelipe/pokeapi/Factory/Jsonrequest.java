@@ -3,7 +3,6 @@ package com.example.andresfelipe.pokeapi.Factory;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.andresfelipe.pokeapi.Pokefight.MainActivity;
 import com.example.andresfelipe.pokeapi.Singleton.MySingleton;
 
 import org.json.JSONObject;

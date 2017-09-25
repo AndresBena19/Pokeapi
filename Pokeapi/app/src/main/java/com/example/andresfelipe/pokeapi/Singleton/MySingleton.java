@@ -12,7 +12,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
-import com.example.andresfelipe.pokeapi.Pokefight.MainActivity;
+import com.example.andresfelipe.pokeapi.Factory.MainActivity;
 
 
 public class MySingleton {
