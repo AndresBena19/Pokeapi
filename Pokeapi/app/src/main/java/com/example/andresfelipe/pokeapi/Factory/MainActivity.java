@@ -104,11 +104,12 @@ public class MainActivity extends AppCompatActivity {
 
                     numero = (int) (Math.random() * 721) + 1;
                     numero2 = (int) (Math.random() * 721) + 1;
-                    String url="http://pokeapi.co/api/v2/pokemon/"+ numero;
-                    String url2="http://pokeapi.co/api/v2/pokemon/"+ numero2;
+                    //String url="http://pokeapi.co/api/v2/pokemon/"+ numero+"/";
+                    //String url2="http://pokeapi.co/api/v2/pokemon/"+ numero2+"/";
                     //Envio de peticiones
 
-                    sendjsonrequest2(url2);
+                    //sendjsonrequest2(url2);
+                    String url="http://pokeapi.co/api/v2/pokemon/1";
                     sendjsonrequest(url);
 
 
