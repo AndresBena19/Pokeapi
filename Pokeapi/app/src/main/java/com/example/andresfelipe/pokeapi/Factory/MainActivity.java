@@ -104,13 +104,15 @@ public class MainActivity extends AppCompatActivity {
 
                     numero = (int) (Math.random() * 721) + 1;
                     numero2 = (int) (Math.random() * 721) + 1;
-                    //String url="http://pokeapi.co/api/v2/pokemon/"+ numero+"/";
-                    //String url2="http://pokeapi.co/api/v2/pokemon/"+ numero2+"/";
+                ;
                     //Envio de peticiones
 
-                    //sendjsonrequest2(url2);
-                    String url="http://pokeapi.co/api/v2/pokemon/1";
-                    sendjsonrequest(url);
+
+                String url="https://pokeapi.co/api/v2/pokemon/"+ numero;
+                sendjsonrequest(url);
+                String url2="https://pokeapi.co/api/v2/pokemon/"+ numero2;
+
+                sendjsonrequest2(url2);
 
 
                     //Ids de valores aletorios obtenidos
@@ -128,6 +130,16 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View view){
                 Intent intent = new Intent (MainActivity.this, Fight.class);
+
+                intent.putExtra("url1", imagen1);
+                intent.putExtra("url2", imagen2);
+                intent.putExtra("vida1", vida1);
+                intent.putExtra("vida2", vida2);
+                intent.putExtra("name1", name1);
+                intent.putExtra("name2", name2);
+
+
+
 
                 startActivity(intent);
 
@@ -161,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
                     pokeone.Setname(response);
                     pokeone.Setpeso(response);
                     pokeone.Setimagen(response);
+                    pokeone.Setvida(response);
                     pokeone.Settipo(response);
                     tipos =pokeone.Gettipo();
 
@@ -173,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                     name2=pokeone.Getname().toString();
-                    vida2=pokeone.Getvida();
+                    vida2=Bexperience;
                     imagen2=pokeone.Getimagen().toString();
 
 
@@ -210,17 +223,20 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(JSONObject response) {
                 try {
                     //Parsing de Json
-                    int Bexperience=0;
+                    int Bexperience;
+                    String name;
                     String[] tipos = new String[2];
-                    //Instanciamos un objeto de tipo Pokemon
-                    Bexperience =response.getInt("base_experience");
-                    Pokemon poketwo =PokemonFactory.GetPokemon(Bexperience=0);
 
+                    Bexperience =response.getInt("base_experience");
+
+                    //Instanciamos un objeto de tipo Pokemon
+                    Pokemon poketwo = PokemonFactory.GetPokemon(Bexperience);
 
                     //Extraemos la informacion
                     poketwo.Setname(response);
                     poketwo.Setpeso(response);
                     poketwo.Setimagen(response);
+                    poketwo.Setvida(response);
                     poketwo.Settipo(response);
                     tipos =poketwo.Gettipo();
 
@@ -232,10 +248,10 @@ public class MainActivity extends AppCompatActivity {
                     poketype1.setText("Tipos:"+tipos[0]+","+tipos[1]);
 
 
-                    //Asignando a valores globables
-                    name1= poketwo.Getname();
-                    vida1=poketwo.Getvida();
-                    imagen1=poketwo.Getimagen();
+                    name1=poketwo.Getname().toString();
+                    vida1=Bexperience;
+                    imagen1=poketwo.Getimagen().toString();
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();

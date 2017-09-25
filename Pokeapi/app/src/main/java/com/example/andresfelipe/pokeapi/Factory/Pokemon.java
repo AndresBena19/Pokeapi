@@ -93,6 +93,8 @@ public abstract class Pokemon {
 
 
     public abstract void Setvida(JSONObject info) throws JSONException;
+
+
     public int Getvida(){
         return  vida;
     }

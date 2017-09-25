@@ -20,18 +20,18 @@ public class Winner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_winner);
 
-
+        //Se capturan los datos del pokemon ganador
         Bundle bundle = getIntent().getExtras();
 
         name1 = bundle.getString("name");
         url= bundle.getString("url");
 
-
+        //Se indentifican los botones y texto
         name= (TextView)findViewById(R.id.textView3);
         imagen=(ImageView)findViewById(R.id.imageView);
 
 
-
+        //Se muestra imagen y nombre del pokemon ganador
         name.setText(name1);
         Glide.with(getApplicationContext()).load(url).into(imagen);
 
