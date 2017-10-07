@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.andresfelipe.pokeapi.Pokefight.Fight"
+    android:background="@drawable/blue">
+
+
+    <TextView
+        android:id="@+id/vida1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView8"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="59dp"
+        android:fontFamily="monospace"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="94dp"
+        android:layout_alignEnd="@+id/poke1" />
+
+    <TextView
+        android:id="@+id/vida2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/name1"
+        android:layout_alignBottom="@+id/vida1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/poke2"
+        android:fontFamily="monospace"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:typeface="monospace" />
+
+    <ImageView
+        android:id="@+id/poke1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_above="@+id/vida1"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/poke2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_above="@+id/vida2"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/pelea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="61dp"
+        android:text="Attack"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/vida2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_above="@+id/poke1"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/poke1" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/poke2"
+        android:layout_alignTop="@+id/textView5"
+        android:fontFamily="monospace"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pelea"
+        android:layout_alignEnd="@+id/pelea"
+        android:layout_alignStart="@+id/pelea"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView5"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:fontFamily="monospace"
+        android:text="Turno de"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="monospace"
+        android:text="Turno de: "
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
